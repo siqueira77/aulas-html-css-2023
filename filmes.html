@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>Tech Coffee</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    
+  </head>
+  <body>
+     
+  <header>
+    <div class="wrapper">
+      <a href="index.html" class="logotype">
+        <img src="img/coffee-icon.svg" alt="Tech Coffee Logo">
+        <h1>Tech Coffee</h1>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
+          <li><a href="video.html">Vídeos</a></li>
+          <li><button onclick="window.location.href='/cadastro.html'">Cadastre-se</button></li>
+        </ul>
+        <img src="img/menu.svg" width="40px" height="40px" alt="Menu Icon">
+      </nav>
+    </div>
+  </header>
+    
+  <main class="wrapper">
+    <div id="sidebar-left">Sidebar left</div>
+    <div id="content">
+      <h1>Produto</h1>
+      Idade: <input type="text" id="txt-idade">
+      <button onclick="verificaIdade()">Verificar</button>
+      <p id="resultado"></p>
+
+      <h3>Novo Filme</h3>
+
+      Nome: <input type="text" id="txt-name"><br>
+      Genero: <input type="text" id="txt-categoria"><br>
+      Foto: <input type="text" id="txt-photo"><br>
+      <button onclick="addMovies()">Addd</button>
+      <button onclick="loadMovies()">Show ALL</button>
+      <button onclick="popMovies()">Remove Last</button>
+      <button onclick="removeByName()">RemoveByName</button>
+      <div id="movies-list">
+        
+      </div>
+    </div>
+    <div id="sidebar-right">Sidebar right</div>
+  </main>
+
+  <footer>
+      <span>Lucas Rodrigues @ 2023</span>
+  </footer>
+  
+  </body>
+  <script src="js/main.js"></script>
+</html>
