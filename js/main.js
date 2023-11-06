@@ -171,7 +171,7 @@ const loadProducts = () => {
     
 }
 
-const movies = []
+let movies = []
 
 function addMovies(){
     const inputName = document.getElementById('txt-name')
@@ -213,12 +213,15 @@ const popMovies = () => {
 
 const removeByName = () =>{
     const inputName = document.getElementById('txt-name')
-    movies.map((movie, i)=>{
-        if (movie.nome == inputName.value){
-            movies.splice(i,1);
-        }
-    }
-    )
+    const result = movies.filter((movie)=>movie.nome !== inputName.value)
+    movies = result
+    // movies.map((movie, i)=>{
+    //     if (movie.nome == inputName.value){
+    //         movies.splice(i,1);
+    //     }
+    // }
+    // )
+    inputName.value=null
     loadMovies()
 }
 
